@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trekking</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+	<!-- navigation menu-->
+        <nav class="close " id="nav">
+          <div class="logo">
+            <img src="logo.png" width="100px;">
+          </div>
+            <div class="menu-bind" id="menu">
+                <a href="#" class="active">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Trekking</a>
+                <a href="#">Tours</a>
+                <a href="#">Destination</a>
+                <a href="#">Contact</a>
+                <a href="#">Travel Blogs</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunc()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+<script type="text/javascript">
+function myFunc() {
+  document.getElementById('nav').classList.toggle('open');
+}
+</script>
+</body>
+</html>
