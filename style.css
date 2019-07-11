@@ -122,6 +122,80 @@ body{
   
 }
 
+.txt-div3{
+  font-family: Futura HV BT;
+  font-weight: 400;
+  color: #f2f2f2;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  top: 75vh;
+  padding-left: 5vw;
+  
+}
+
+.txt-div4{
+  font-family: Futura HV BT;
+  font-weight: 400;
+  color: #f2f2f2;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  right: 5vw;
+  top: 75vh;
+  
+}
+
+.weathertitle{
+  margin: 5px 0;
+  color: white;
+  text-align: left;
+}
+.weather{
+  margin: 5px 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.weather-item1,.weather-item2,.weather-item3{
+  position: absolute;
+  top: 5vh;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.weather-item1{
+  animation-name: anim-1;
+}
+.weather-item2{
+  animation-name: anim-2;
+}
+.weather-item3{
+  animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+  0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 5%; opacity: 1; }
+  33.33%, 100% { left: 15%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+  0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 5%; opacity: 1; }
+  66.66%, 100% { left: 15%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+  0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 5%; opacity: 1; }
+  100% { left: 15%; opacity: 0; }
+}
+
        /* parallax end*/
 
 
@@ -141,7 +215,7 @@ body{
             align-items: center;
             justify-content: space-between; /*flex-end*/;
             overflow: hidden;
-            height: 80px;
+            
             transition: 0.3s ease-in-out;
             z-index: 1;
         }
@@ -159,7 +233,7 @@ body{
             padding: 0px 15px;
             font-family: Poppins;
             font-weight: 400;
-            font-size: 14px;
+            
 
         }
 
@@ -182,6 +256,16 @@ body{
         .logo{
           margin: 0px 35px;
         }
+        .imgg{
+          transition: 0.3s ease-in-out;
+        }
+        .open1 >.logo > .imgg{
+          width: 100px;
+        }
+
+        .open1 a{
+          font-size: 14px;
+        }
 
 
 @media screen and (max-width: 600px) {
@@ -197,6 +281,7 @@ body{
   nav {
     position: relative;
     height: 40vh; }
+
 
   nav .icon {
     position: fixed;
@@ -221,6 +306,14 @@ body{
         top: 30px;
         font-size: 14px;
   }
+
+.logo{
+  margin: 5px 10px;
+}
+.open1 >.logo > .imgg{
+          width: 80px;
+        }
+
   .close{
   }
 
@@ -234,8 +327,19 @@ body{
 
   }
 
-  .open.close1 { background-color:rgba(30,144,255,0.8); }
-.open.open1 { background-color:rgba(30,144,255,0.8);}
+
+  .open.close1 { 
+    background-color:rgba(30,144,255,0.8);
+    height: 50vh; 
+  }
+.open.open1 { 
+  background-color:rgba(30,144,255,0.8);
+  height: 50vh;
+}
+
+.open .logo{
+  display: none;
+}
 
 }
 
@@ -243,7 +347,7 @@ body{
 
 .container {
   background-color: white;
-  padding: 30px;
+  /*padding: 30px;*/
   margin: 0;
   position: absolute;
   top: 100vh;
@@ -269,5 +373,80 @@ p {
   font-size: 16px;
   line-height: 130%;
 }
-.close1 { background-color:rgba(25,25,112,0.9); }
-.open1 { background-color:transparent;}
+.close1 { 
+  background-color:rgba(0,0,33,0.9);
+  height: 50px;
+ }
+.close1 > .logo > .imgg{
+  width: 60px;
+}
+.close1 a{
+  font-size: 14px;
+}
+
+.open1 { background-color:transparent;
+height: 80px;
+
+}
+
+
+
+
+.intro{
+  height: 80vh;
+  background-color: lightgrey;
+  
+}
+.intro-0{
+  display: flex;
+  width: 100%;
+  height: 30%;
+  padding: 7vh 0;
+
+}
+.intro-1{
+  width: 50%;
+  height: 100%;
+  display:inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  font-family: Avenir Next LT Pro;
+  font-weight: 400;
+  font-size: 1.8em;
+  padding-right: 2vw;
+}
+
+.intro-2{
+  width: 50%;
+  height: 100%;
+  display:inline-block;
+  border-left: black 4px solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: Avenir Next LT Pro;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 2vw;
+}
+
+
+.intro-00{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 45%;
+  padding-bottom: 5vh;
+
+}
+
+.why{
+  font-family: Avenir Next LT Pro;
+  font-weight: 400;
+  font-size: 1.8em;
+}
